@@ -109,7 +109,7 @@ export default function App() {
                 height: "100%"
               }}
               src="https://www.youtube.com/embed/-uXCfT3nM20"
-              title="Главный проект"
+              title="Два мотылька"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
@@ -137,7 +137,8 @@ export default function App() {
               "dXpvt-sy71U",
               "6OIeCRpkn0o",
               "l4G4ZfinCus",
-              "PVcf2AMQe3o"
+              "PVcf2AMQe3o",
+              "9xFf-3rSxC4"
             ].map((id) => (
               <div key={id} style={{
                 aspectRatio: "16/9",
