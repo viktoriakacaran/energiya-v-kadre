@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 export default function App() {
   const [name, setName] = useState("");
-  const [tg, setTg] = useState("");
+  const [contact, setContact] = useState("");
 
   const sendLead = () => {
-    const message = `Новая заявка:%0AИмя: ${name}%0ATG: ${tg}`;
+    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}`;
     window.open(`https://t.me/energiya_v_kadre?text=${message}`);
   };
 
@@ -193,7 +193,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ФОРМА ЗАКАЗА */}
+        {/* ФОРМА ЗАКАЗА (новое поле для контакта) */}
         <div style={{
           marginBottom: "60px",
           background: "rgba(255,245,235,0.05)",
@@ -214,7 +214,7 @@ export default function App() {
             color: "#b9aa9c",
             marginBottom: "20px"
           }}>
-            Оставь данные — я отвечу с идеей и форматом визуала под тебя
+            Оставь имя и удобный контакт — я отвечу с идеей и форматом визуала под тебя
           </p>
 
           <div style={{
@@ -245,9 +245,9 @@ export default function App() {
                 color: "#f0e6dd",
                 fontSize: "16px"
               }}
-              placeholder="Telegram @username"
-              value={tg}
-              onChange={(e) => setTg(e.target.value)}
+              placeholder="Контакт (Telegram, VK, MAX, телефон)"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
             />
           </div>
 
