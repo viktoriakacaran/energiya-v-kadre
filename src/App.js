@@ -57,7 +57,7 @@ export default function App() {
           </p>
         </div>
 
-        {/* ПЛЕЕР */}
+        {/* ПЛЕЕР (SoundCloud) */}
         <div style={{
           marginBottom: "50px",
           textAlign: "center"
@@ -70,18 +70,29 @@ export default function App() {
             Слушать музыку
           </p>
           <iframe
-            src="https://playlists.ibroadcast.com/enGVhEOWVac"
-            style={{
-              width: "100%",
-              height: "400px",
-              border: "none",
-              borderRadius: "20px",
-              background: "rgba(255,245,235,0.05)",
-              backdropFilter: "blur(4px)"
-            }}
-            title="iBroadcast Playlist"
+            width="100%"
+            height="300"
+            scrolling="no"
+            frameBorder="no"
             allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2209265600&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            style={{ borderRadius: "20px" }}
+            title="SoundCloud Playlist"
           ></iframe>
+          <div style={{
+            fontSize: "10px",
+            color: "#cccccc",
+            lineBreak: "anywhere",
+            wordBreak: "normal",
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            textOverflow: "ellipsis",
+            fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+            fontWeight: "100",
+            marginTop: "8px"
+          }}>
+            <a href="https://soundcloud.com/viktoriya-kaczaran" title="Виктория Кацаран" target="_blank" style={{ color: "#cccccc", textDecoration: "none" }}>Виктория Кацаран</a> · <a href="https://soundcloud.com/viktoriya-kaczaran/sets/energiya-v-kadre-izbrannoe" title="«Энергия в кадре — избранное»" target="_blank" style={{ color: "#cccccc", textDecoration: "none" }}>«Энергия в кадре — избранное»</a>
+          </div>
         </div>
 
         {/* ГЛАВНОЕ ВИДЕО */}
@@ -193,7 +204,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ФОРМА ЗАКАЗА (новое поле для контакта) */}
+        {/* ФОРМА ЗАКАЗА */}
         <div style={{
           marginBottom: "60px",
           background: "rgba(255,245,235,0.05)",
