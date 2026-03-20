@@ -57,42 +57,40 @@ export default function App() {
           </p>
         </div>
 
-        {/* ПЛЕЕР (SoundCloud) */}
+        {/* МУЗЫКА (кнопка) */}
         <div style={{
           marginBottom: "50px",
-          textAlign: "center"
+          textAlign: "center",
+          background: "rgba(255,245,235,0.05)",
+          border: "1px solid rgba(255,245,235,0.12)",
+          borderRadius: "30px",
+          padding: "25px"
         }}>
           <p style={{
-            fontSize: "14px",
-            color: "#aa9f94",
-            marginBottom: "10px"
+            fontSize: "16px",
+            color: "#d9c9b8",
+            marginBottom: "15px"
           }}>
-            Слушать музыку
+            🎵 Слушать мою музыку
           </p>
-          <iframe
-            width="100%"
-            height="300"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2209265600&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            style={{ borderRadius: "20px" }}
-            title="SoundCloud Playlist"
-          ></iframe>
-          <div style={{
-            fontSize: "10px",
-            color: "#cccccc",
-            lineBreak: "anywhere",
-            wordBreak: "normal",
-            overflow: "hidden",
-            whiteSpace: "nowrap",
-            textOverflow: "ellipsis",
-            fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
-            fontWeight: "100",
-            marginTop: "8px"
-          }}>
-            <a href="https://soundcloud.com/viktoriya-kaczaran" title="Виктория Кацаран" target="_blank" style={{ color: "#cccccc", textDecoration: "none" }}>Виктория Кацаран</a> · <a href="https://soundcloud.com/viktoriya-kaczaran/sets/energiya-v-kadre-izbrannoe" title="«Энергия в кадре — избранное»" target="_blank" style={{ color: "#cccccc", textDecoration: "none" }}>«Энергия в кадре — избранное»</a>
-          </div>
+          <a
+            href="https://soundcloud.com/viktoriya-kaczaran/sets/energiya-v-kadre-izbrannoe"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              background: "#f0e6dd",
+              color: "#1a1510",
+              padding: "12px 24px",
+              borderRadius: "40px",
+              textDecoration: "none",
+              fontWeight: "bold",
+              fontSize: "16px",
+              transition: "0.2s"
+            }}
+          >
+            Открыть плейлист на SoundCloud
+          </a>
         </div>
 
         {/* ГЛАВНОЕ ВИДЕО */}
