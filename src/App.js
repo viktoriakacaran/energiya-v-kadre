@@ -5,8 +5,7 @@ export default function App() {
   const [contact, setContact] = useState("");
 
   const sendLead = () => {
-    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}`;
-    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165`);
+    window.open(`https://vk.com/energiya_v_kadre`);
   };
 
   return (
@@ -27,7 +26,7 @@ export default function App() {
         {/* ШАПКА */}
         <div style={{
           textAlign: "center",
-          marginBottom: "50px"
+          marginBottom: "30px"
         }}>
           <h1 style={{
             fontFamily: "'Playfair Display', serif",
@@ -55,6 +54,25 @@ export default function App() {
           }}>
             Мои клипы — продолжение моей музыки. Мой стиль — нежность, глубина, полёт.
           </p>
+        </div>
+
+        {/* ФОТО */}
+        <div style={{
+          textAlign: "center",
+          marginBottom: "40px"
+        }}>
+          <img
+            src="https://raw.githubusercontent.com/viktoriakacaran/energia-v-kadre/526d39e64fe9b6c9c98987275b46bb31eb7cff0a/%D0%AF.jpg"
+            alt="Виктория Кацаран"
+            style={{
+              width: "180px",
+              height: "180px",
+              borderRadius: "50%",
+              objectFit: "cover",
+              border: "2px solid rgba(255,245,235,0.3)",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.3)"
+            }}
+          />
         </div>
 
         {/* МУЗЫКА */}
@@ -202,7 +220,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ФОРМА ЗАКАЗА (ведёт в VK) */}
+        {/* ФОРМА ЗАКАЗА */}
         <div style={{
           marginBottom: "60px",
           background: "rgba(255,245,235,0.05)",
@@ -279,7 +297,7 @@ export default function App() {
           </button>
         </div>
 
-        {/* КНОПКИ ПЛАТФОРМ (без Telegram) */}
+        {/* КНОПКИ ПЛАТФОРМ */}
         <div style={{
           marginBottom: "50px"
         }}>
@@ -339,7 +357,5 @@ export default function App() {
         </p>
       </div>
     </div>
-  );
-}
   );
 }
