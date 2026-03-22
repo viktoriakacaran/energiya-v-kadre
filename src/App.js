@@ -6,7 +6,7 @@ export default function App() {
 
   const sendLead = () => {
     const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}`;
-    window.open(`https://t.me/energiya_v_kadre?text=${message}`);
+    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165`);
   };
 
   return (
@@ -57,7 +57,7 @@ export default function App() {
           </p>
         </div>
 
-        {/* МУЗЫКА (кнопка) */}
+        {/* МУЗЫКА */}
         <div style={{
           marginBottom: "50px",
           textAlign: "center",
@@ -202,7 +202,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ФОРМА ЗАКАЗА */}
+        {/* ФОРМА ЗАКАЗА (ведёт в VK) */}
         <div style={{
           marginBottom: "60px",
           background: "rgba(255,245,235,0.05)",
@@ -279,7 +279,7 @@ export default function App() {
           </button>
         </div>
 
-        {/* КНОПКИ ПЛАТФОРМ */}
+        {/* КНОПКИ ПЛАТФОРМ (без Telegram) */}
         <div style={{
           marginBottom: "50px"
         }}>
@@ -303,7 +303,6 @@ export default function App() {
               { name: "TikTok", url: "https://tiktok.com/@user30499853044043" },
               { name: "Instagram", url: "https://instagram.com/vikka_tsaran" },
               { name: "MAX", url: "https://max.ru/u/f9LHodD0cOLMgsWfQ6JPqhHZRRLMOmHwPEWcvLkIlMJ9qYH-625wU_SQb_c" },
-              { name: "Telegram", url: "https://t.me/energiya_v_kadre" },
               { name: "Pinterest", url: "https://ru.pinterest.com/vikka_tsaran" },
               { name: "VK", url: "https://vk.com/energiya_v_kadre" },
               { name: "VK Видео", url: "https://vkvideo.ru/@energiya_v_kadre" }
@@ -340,5 +339,7 @@ export default function App() {
         </p>
       </div>
     </div>
+  );
+}
   );
 }
