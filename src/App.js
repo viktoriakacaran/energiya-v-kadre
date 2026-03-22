@@ -56,25 +56,6 @@ export default function App() {
           </p>
         </div>
 
-        {/* ФОТО */}
-        <div style={{
-          textAlign: "center",
-          marginBottom: "40px"
-        }}>
-          <img
-            src="https://raw.githubusercontent.com/viktoriakacaran/energia-v-kadre/526d39e64fe9b6c9c98987275b46bb31eb7cff0a/%D0%AF.jpg"
-            alt="Виктория Кацаран"
-            style={{
-              width: "180px",
-              height: "180px",
-              borderRadius: "50%",
-              objectFit: "cover",
-              border: "2px solid rgba(255,245,235,0.3)",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.3)"
-            }}
-          />
-        </div>
-
         {/* МУЗЫКА */}
         <div style={{
           marginBottom: "50px",
@@ -109,6 +90,22 @@ export default function App() {
           >
             Открыть плейлист на SoundCloud
           </a>
+        </div>
+
+        {/* ФОТО (пин Pinterest) */}
+        <div style={{
+          textAlign: "center",
+          marginBottom: "40px"
+        }}>
+          <iframe 
+            src="https://assets.pinterest.com/ext/embed.html?id=1106618939706556160"
+            height="704"
+            width="345"
+            frameBorder="0"
+            scrolling="no"
+            style={{ margin: "0 auto", borderRadius: "16px" }}
+            title="Виктория Кацаран"
+          ></iframe>
         </div>
 
         {/* ГЛАВНОЕ ВИДЕО */}
