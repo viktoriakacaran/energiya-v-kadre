@@ -92,14 +92,14 @@ export default function App() {
           </a>
         </div>
 
-        {/* ФОТО (пин Pinterest) */}
+        {/* ФОТО */}
         <div style={{
           textAlign: "center",
           marginBottom: "40px"
         }}>
           <iframe 
-            src="https://assets.pinterest.com/ext/embed.html?id=1106618939706556160"
-            height="704"
+            src="https://assets.pinterest.com/ext/embed.html?id=1106618939706607767"
+            height="297"
             width="345"
             frameBorder="0"
             scrolling="no"
@@ -291,6 +291,60 @@ export default function App() {
             onClick={sendLead}
           >
             🚀 Получить идею проекта
+          </button>
+        </div>
+
+        {/* НОВЫЙ БЛОК: ЗАКАЗАТЬ КЛИП */}
+        <div style={{
+          marginBottom: "60px",
+          background: "rgba(255,245,235,0.05)",
+          border: "1px solid rgba(255,245,235,0.12)",
+          borderRadius: "30px",
+          padding: "30px",
+          backdropFilter: "blur(8px)"
+        }}>
+          <p style={{
+            fontSize: "20px",
+            marginBottom: "8px",
+            color: "#f0e6dd"
+          }}>
+            🎬 Заказать клип
+          </p>
+          <p style={{
+            fontSize: "14px",
+            color: "#b9aa9c",
+            marginBottom: "20px"
+          }}>
+            Я работаю индивидуально. Стоимость зависит от сложности, длительности и объёма работы.
+          </p>
+          <div style={{
+            fontSize: "14px",
+            color: "#d9c9b8",
+            marginBottom: "20px",
+            lineHeight: "1.6"
+          }}>
+            <strong>Как это происходит:</strong><br />
+            1. Вы оставляете заявку в VK<br />
+            2. Я присылаю примеры и примерную стоимость<br />
+            3. Мы обсуждаем детали, и я начинаю работу<br />
+            <em>Никаких скрытых платежей. Всё честно.</em>
+          </div>
+          <button
+            style={{
+              width: "100%",
+              padding: "16px",
+              background: "#f0e6dd",
+              color: "#1a1510",
+              border: "none",
+              borderRadius: "40px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              cursor: "pointer",
+              transition: "0.2s"
+            }}
+            onClick={sendLead}
+          >
+            🚀 Оставить заявку
           </button>
         </div>
 
