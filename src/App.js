@@ -4,8 +4,9 @@ export default function App() {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
 
-  const sendLead = () => {
-    window.open(`https://vk.com/energiya_v_kadre`);
+  const sendLead = (packageName) => {
+    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: ${packageName}`;
+    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
   };
 
   return (
@@ -217,7 +218,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ФОРМА ЗАКАЗА */}
+        {/* БЛОК «ЗАКАЗАТЬ КЛИП» С ПАКЕТАМИ */}
         <div style={{
           marginBottom: "60px",
           background: "rgba(255,245,235,0.05)",
@@ -229,123 +230,170 @@ export default function App() {
           <p style={{
             fontSize: "20px",
             marginBottom: "8px",
-            color: "#f0e6dd"
+            color: "#f0e6dd",
+            textAlign: "center"
           }}>
-            Получить концепт под свой проект
+            🎬 Выбери свой пакет
           </p>
           <p style={{
             fontSize: "14px",
             color: "#b9aa9c",
-            marginBottom: "20px"
+            marginBottom: "25px",
+            textAlign: "center"
           }}>
-            Оставь имя и удобный контакт — я отвечу с идеей и форматом визуала под тебя
+            Я работаю индивидуально. Стоимость зависит от сложности, длительности и объёма работы.
           </p>
 
           <div style={{
             display: "flex",
-            flexDirection: "column",
-            gap: "12px",
+            flexWrap: "wrap",
+            gap: "20px",
+            justifyContent: "center",
             marginBottom: "20px"
           }}>
-            <input
-              style={{
-                padding: "14px 18px",
-                background: "rgba(0,0,0,0.4)",
-                border: "1px solid rgba(255,245,235,0.15)",
-                borderRadius: "16px",
-                color: "#f0e6dd",
-                fontSize: "16px"
-              }}
-              placeholder="Имя"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              style={{
-                padding: "14px 18px",
-                background: "rgba(0,0,0,0.4)",
-                border: "1px solid rgba(255,245,235,0.15)",
-                borderRadius: "16px",
-                color: "#f0e6dd",
-                fontSize: "16px"
-              }}
-              placeholder="Контакт (Telegram, VK, MAX, телефон)"
-              value={contact}
-              onChange={(e) => setContact(e.target.value)}
-            />
-          </div>
+            {/* Пакет 1 */}
+            <div style={{
+              flex: "1",
+              minWidth: "240px",
+              background: "rgba(0,0,0,0.4)",
+              borderRadius: "24px",
+              padding: "20px",
+              textAlign: "center",
+              border: "1px solid rgba(255,245,235,0.1)"
+            }}>
+              <h3 style={{ fontSize: "22px", marginBottom: "10px", color: "#f5e6d3" }}>Базовый</h3>
+              <p style={{ fontSize: "14px", color: "#d9c9b8", marginBottom: "15px" }}>
+                Клип под готовую музыку, 1–2 мин, AI-визуал, одна правка.
+              </p>
+              <p style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "20px", color: "#f0e6dd" }}>
+                от 15 000 ₽
+              </p>
+              <button
+                style={{
+                  padding: "12px 20px",
+                  background: "#f0e6dd",
+                  color: "#1a1510",
+                  border: "none",
+                  borderRadius: "40px",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                  transition: "0.2s",
+                  width: "100%"
+                }}
+                onClick={() => {
+                  const name = prompt("Ваше имя");
+                  const contact = prompt("Ваш контакт (Telegram, VK, MAX, телефон)");
+                  if (name && contact) {
+                    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: Базовый`;
+                    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
+                  } else {
+                    alert("Пожалуйста, заполните имя и контакт");
+                  }
+                }}
+              >
+                Выбрать
+              </button>
+            </div>
 
-          <button
-            style={{
-              width: "100%",
-              padding: "16px",
-              background: "#f0e6dd",
-              color: "#1a1510",
-              border: "none",
-              borderRadius: "40px",
-              fontSize: "16px",
-              fontWeight: "bold",
-              cursor: "pointer",
-              transition: "0.2s"
-            }}
-            onClick={sendLead}
-          >
-            🚀 Получить идею проекта
-          </button>
-        </div>
+            {/* Пакет 2 */}
+            <div style={{
+              flex: "1",
+              minWidth: "240px",
+              background: "rgba(0,0,0,0.4)",
+              borderRadius: "24px",
+              padding: "20px",
+              textAlign: "center",
+              border: "1px solid rgba(255,245,235,0.1)"
+            }}>
+              <h3 style={{ fontSize: "22px", marginBottom: "10px", color: "#f5e6d3" }}>Стандартный</h3>
+              <p style={{ fontSize: "14px", color: "#d9c9b8", marginBottom: "15px" }}>
+                Музыка + клип под ключ. Авторский инструментал, синхронизация, две правки.
+              </p>
+              <p style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "20px", color: "#f0e6dd" }}>
+                от 30 000 ₽
+              </p>
+              <button
+                style={{
+                  padding: "12px 20px",
+                  background: "#f0e6dd",
+                  color: "#1a1510",
+                  border: "none",
+                  borderRadius: "40px",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                  transition: "0.2s",
+                  width: "100%"
+                }}
+                onClick={() => {
+                  const name = prompt("Ваше имя");
+                  const contact = prompt("Ваш контакт (Telegram, VK, MAX, телефон)");
+                  if (name && contact) {
+                    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: Стандартный`;
+                    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
+                  } else {
+                    alert("Пожалуйста, заполните имя и контакт");
+                  }
+                }}
+              >
+                Выбрать
+              </button>
+            </div>
 
-        {/* НОВЫЙ БЛОК: ЗАКАЗАТЬ КЛИП */}
-        <div style={{
-          marginBottom: "60px",
-          background: "rgba(255,245,235,0.05)",
-          border: "1px solid rgba(255,245,235,0.12)",
-          borderRadius: "30px",
-          padding: "30px",
-          backdropFilter: "blur(8px)"
-        }}>
-          <p style={{
-            fontSize: "20px",
-            marginBottom: "8px",
-            color: "#f0e6dd"
-          }}>
-            🎬 Заказать клип
-          </p>
-          <p style={{
-            fontSize: "14px",
-            color: "#b9aa9c",
-            marginBottom: "20px"
-          }}>
-            Я работаю индивидуально. Стоимость зависит от сложности, длительности и объёма работы.
-          </p>
-          <div style={{
-            fontSize: "14px",
-            color: "#d9c9b8",
-            marginBottom: "20px",
-            lineHeight: "1.6"
-          }}>
-            <strong>Как это происходит:</strong><br />
-            1. Вы оставляете заявку в VK<br />
-            2. Я присылаю примеры и примерную стоимость<br />
-            3. Мы обсуждаем детали, и я начинаю работу<br />
-            <em>Никаких скрытых платежей. Всё честно.</em>
+            {/* Пакет 3 */}
+            <div style={{
+              flex: "1",
+              minWidth: "240px",
+              background: "rgba(0,0,0,0.4)",
+              borderRadius: "24px",
+              padding: "20px",
+              textAlign: "center",
+              border: "1px solid rgba(255,245,235,0.1)"
+            }}>
+              <h3 style={{ fontSize: "22px", marginBottom: "10px", color: "#f5e6d3" }}>Премиум</h3>
+              <p style={{ fontSize: "14px", color: "#d9c9b8", marginBottom: "15px" }}>
+                Эксклюзивный проект. Сценарий, сложная обработка, правки до результата.
+              </p>
+              <p style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "20px", color: "#f0e6dd" }}>
+                от 50 000 ₽
+              </p>
+              <button
+                style={{
+                  padding: "12px 20px",
+                  background: "#f0e6dd",
+                  color: "#1a1510",
+                  border: "none",
+                  borderRadius: "40px",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                  transition: "0.2s",
+                  width: "100%"
+                }}
+                onClick={() => {
+                  const name = prompt("Ваше имя");
+                  const contact = prompt("Ваш контакт (Telegram, VK, MAX, телефон)");
+                  if (name && contact) {
+                    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: Премиум`;
+                    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
+                  } else {
+                    alert("Пожалуйста, заполните имя и контакт");
+                  }
+                }}
+              >
+                Выбрать
+              </button>
+            </div>
           </div>
-          <button
-            style={{
-              width: "100%",
-              padding: "16px",
-              background: "#f0e6dd",
-              color: "#1a1510",
-              border: "none",
-              borderRadius: "40px",
-              fontSize: "16px",
-              fontWeight: "bold",
-              cursor: "pointer",
-              transition: "0.2s"
-            }}
-            onClick={sendLead}
-          >
-            🚀 Оставить заявку
-          </button>
+          <p style={{
+            fontSize: "12px",
+            color: "#7f7368",
+            textAlign: "center",
+            marginTop: "10px"
+          }}>
+            Никаких скрытых платежей. Всё честно.
+          </p>
         </div>
 
         {/* КНОПКИ ПЛАТФОРМ */}
