@@ -4,9 +4,9 @@ export default function App() {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
 
-  const sendLead = (packageName) => {
-    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: ${packageName}`;
-    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
+  const sendLead = () => {
+    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}`;
+    window.open(`https://vk.com/energiya_v_kadre`);
   };
 
   return (
@@ -218,7 +218,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* БЛОК «ЗАКАЗАТЬ КЛИП» С ПАКЕТАМИ */}
+        {/* ФОРМА ЗАКАЗА */}
         <div style={{
           marginBottom: "60px",
           background: "rgba(255,245,235,0.05)",
@@ -230,170 +230,69 @@ export default function App() {
           <p style={{
             fontSize: "20px",
             marginBottom: "8px",
-            color: "#f0e6dd",
-            textAlign: "center"
+            color: "#f0e6dd"
           }}>
-            🎬 Выбери свой пакет
+            Получить концепт под свой проект
           </p>
           <p style={{
             fontSize: "14px",
             color: "#b9aa9c",
-            marginBottom: "25px",
-            textAlign: "center"
+            marginBottom: "20px"
           }}>
-            Я работаю индивидуально. Стоимость зависит от сложности, длительности и объёма работы.
+            Оставь имя и удобный контакт — я отвечу с идеей и форматом визуала под тебя
           </p>
 
           <div style={{
             display: "flex",
-            flexWrap: "wrap",
-            gap: "20px",
-            justifyContent: "center",
+            flexDirection: "column",
+            gap: "12px",
             marginBottom: "20px"
           }}>
-            {/* Пакет 1 */}
-            <div style={{
-              flex: "1",
-              minWidth: "240px",
-              background: "rgba(0,0,0,0.4)",
-              borderRadius: "24px",
-              padding: "20px",
-              textAlign: "center",
-              border: "1px solid rgba(255,245,235,0.1)"
-            }}>
-              <h3 style={{ fontSize: "22px", marginBottom: "10px", color: "#f5e6d3" }}>Базовый</h3>
-              <p style={{ fontSize: "14px", color: "#d9c9b8", marginBottom: "15px" }}>
-                Клип под готовую музыку, 1–2 мин, AI-визуал, одна правка.
-              </p>
-              <p style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "20px", color: "#f0e6dd" }}>
-                от 15 000 ₽
-              </p>
-              <button
-                style={{
-                  padding: "12px 20px",
-                  background: "#f0e6dd",
-                  color: "#1a1510",
-                  border: "none",
-                  borderRadius: "40px",
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  transition: "0.2s",
-                  width: "100%"
-                }}
-                onClick={() => {
-                  const name = prompt("Ваше имя");
-                  const contact = prompt("Ваш контакт (Telegram, VK, MAX, телефон)");
-                  if (name && contact) {
-                    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: Базовый`;
-                    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
-                  } else {
-                    alert("Пожалуйста, заполните имя и контакт");
-                  }
-                }}
-              >
-                Выбрать
-              </button>
-            </div>
-
-            {/* Пакет 2 */}
-            <div style={{
-              flex: "1",
-              minWidth: "240px",
-              background: "rgba(0,0,0,0.4)",
-              borderRadius: "24px",
-              padding: "20px",
-              textAlign: "center",
-              border: "1px solid rgba(255,245,235,0.1)"
-            }}>
-              <h3 style={{ fontSize: "22px", marginBottom: "10px", color: "#f5e6d3" }}>Стандартный</h3>
-              <p style={{ fontSize: "14px", color: "#d9c9b8", marginBottom: "15px" }}>
-                Музыка + клип под ключ. Авторский инструментал, синхронизация, две правки.
-              </p>
-              <p style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "20px", color: "#f0e6dd" }}>
-                от 30 000 ₽
-              </p>
-              <button
-                style={{
-                  padding: "12px 20px",
-                  background: "#f0e6dd",
-                  color: "#1a1510",
-                  border: "none",
-                  borderRadius: "40px",
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  transition: "0.2s",
-                  width: "100%"
-                }}
-                onClick={() => {
-                  const name = prompt("Ваше имя");
-                  const contact = prompt("Ваш контакт (Telegram, VK, MAX, телефон)");
-                  if (name && contact) {
-                    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: Стандартный`;
-                    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
-                  } else {
-                    alert("Пожалуйста, заполните имя и контакт");
-                  }
-                }}
-              >
-                Выбрать
-              </button>
-            </div>
-
-            {/* Пакет 3 */}
-            <div style={{
-              flex: "1",
-              minWidth: "240px",
-              background: "rgba(0,0,0,0.4)",
-              borderRadius: "24px",
-              padding: "20px",
-              textAlign: "center",
-              border: "1px solid rgba(255,245,235,0.1)"
-            }}>
-              <h3 style={{ fontSize: "22px", marginBottom: "10px", color: "#f5e6d3" }}>Премиум</h3>
-              <p style={{ fontSize: "14px", color: "#d9c9b8", marginBottom: "15px" }}>
-                Эксклюзивный проект. Сценарий, сложная обработка, правки до результата.
-              </p>
-              <p style={{ fontSize: "20px", fontWeight: "bold", marginBottom: "20px", color: "#f0e6dd" }}>
-                от 50 000 ₽
-              </p>
-              <button
-                style={{
-                  padding: "12px 20px",
-                  background: "#f0e6dd",
-                  color: "#1a1510",
-                  border: "none",
-                  borderRadius: "40px",
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  transition: "0.2s",
-                  width: "100%"
-                }}
-                onClick={() => {
-                  const name = prompt("Ваше имя");
-                  const contact = prompt("Ваш контакт (Telegram, VK, MAX, телефон)");
-                  if (name && contact) {
-                    const message = `Новая заявка:%0AИмя: ${name}%0AКонтакт: ${contact}%0AПакет: Премиум`;
-                    window.open(`https://vk.com/energiya_v_kadre?w=app6894400_-239493165&text=${message}`);
-                  } else {
-                    alert("Пожалуйста, заполните имя и контакт");
-                  }
-                }}
-              >
-                Выбрать
-              </button>
-            </div>
+            <input
+              style={{
+                padding: "14px 18px",
+                background: "rgba(0,0,0,0.4)",
+                border: "1px solid rgba(255,245,235,0.15)",
+                borderRadius: "16px",
+                color: "#f0e6dd",
+                fontSize: "16px"
+              }}
+              placeholder="Имя"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              style={{
+                padding: "14px 18px",
+                background: "rgba(0,0,0,0.4)",
+                border: "1px solid rgba(255,245,235,0.15)",
+                borderRadius: "16px",
+                color: "#f0e6dd",
+                fontSize: "16px"
+              }}
+              placeholder="Контакт (Telegram, VK, MAX, телефон)"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+            />
           </div>
-          <p style={{
-            fontSize: "12px",
-            color: "#7f7368",
-            textAlign: "center",
-            marginTop: "10px"
-          }}>
-            Никаких скрытых платежей. Всё честно.
-          </p>
+
+          <button
+            style={{
+              width: "100%",
+              padding: "16px",
+              background: "#f0e6dd",
+              color: "#1a1510",
+              border: "none",
+              borderRadius: "40px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              cursor: "pointer",
+              transition: "0.2s"
+            }}
+            onClick={sendLead}
+          >
+            🚀 Получить идею проекта
+          </button>
         </div>
 
         {/* КНОПКИ ПЛАТФОРМ */}
@@ -422,7 +321,8 @@ export default function App() {
               { name: "MAX", url: "https://max.ru/u/f9LHodD0cOLMgsWfQ6JPqhHZRRLMOmHwPEWcvLkIlMJ9qYH-625wU_SQb_c" },
               { name: "Pinterest", url: "https://ru.pinterest.com/vikka_tsaran" },
               { name: "VK", url: "https://vk.com/energiya_v_kadre" },
-              { name: "VK Видео", url: "https://vkvideo.ru/@energiya_v_kadre" }
+              { name: "VK Видео", url: "https://vkvideo.ru/@energiya_v_kadre" },
+              { name: "Дзен", url: "https://dzen.ru/id/69cec4ac1be80a16ff940c1b" }
             ].map((platform, i) => (
               <a
                 key={i}
